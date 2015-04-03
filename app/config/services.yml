@@ -1,0 +1,26 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    sonata.admin.articles:
+        class:  AppBundle\Admin\ArticleAdmin
+        arguments: [~,AppBundle\Entity\Article,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Articles", label: "Article" }
+    sonata.admin.tags:
+        class: AppBundle\Admin\TagAdmin
+        arguments: [~,AppBundle\Entity\Tag,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Articles", label: "Tags" }
+    sonata.admin.category:
+                class: AppBundle\Admin\CategoryAdmin
+                arguments: [~,AppBundle\Entity\Category,~]
+                tags:
+                    - { name: sonata.admin, manager_type: orm, group: "Articles", label: "Category" }
+    sonata.admin.Users:
+                class: AppBundle\Admin\UsersAdmin
+                arguments: [~,AppBundle\Entity\Tag,~]
+                tags:
+                    - { name: sonata.admin, manager_type: orm, group: "Users", label: "Users" }
