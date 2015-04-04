@@ -31,7 +31,9 @@ class ArticleAdmin extends Admin{
             ->add('content')
             ->add('category')
             ->add('tag')
-            ->add('updated_at')
+            ->add('createdAt',null,[
+                'data' => new \DateTime(),
+            ])
         ;
     }
 
@@ -61,8 +63,6 @@ class ArticleAdmin extends Admin{
             ->addIdentifier('id')
             ->add('title')
             ->add('content')
-            ->add('createdAt')
-            ->add('updatedAt')
             ->add('category')
             ->add('tag')
         ;
@@ -80,8 +80,6 @@ class ArticleAdmin extends Admin{
             ->add('id')
             ->add('title')
             ->add('content')
-            ->add('createdAt')
-            ->add('updatedAt')
             ->add('category')
             ->add('tag')
         ;

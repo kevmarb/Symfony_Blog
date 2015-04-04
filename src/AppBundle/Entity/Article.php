@@ -46,7 +46,7 @@ class Article
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="updated_at", type="datetime")
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
      */
     private $updatedAt;
 
@@ -181,4 +181,84 @@ class Article
     {
         return $this->updatedAt;
     }
+
+    /**
+     * Set category
+     *
+     * @param \AppBundle\Entity\Category $category
+     * @return Article
+     */
+    public function setCategory(\AppBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \AppBundle\Entity\Category 
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * Add tag
+     *
+     * @param \AppBundle\Entity\Tag $tag
+     * @return Article
+     */
+    public function addTag(\AppBundle\Entity\Tag $tag)
+    {
+        $this->tag[] = $tag;
+
+        return $this;
+    }
+
+    /**
+     * Remove tag
+     *
+     * @param \AppBundle\Entity\Tag $tag
+     */
+    public function removeTag(\AppBundle\Entity\Tag $tag)
+    {
+        $this->tag->removeElement($tag);
+    }
+
+    /**
+     * Get tag
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTag()
+    {
+        return $this->tag;
+    }
+
+    /**
+     * Set users
+     *
+     * @param \AppBundle\Entity\Users $users
+     * @return Article
+     */
+    public function setUsers(\AppBundle\Entity\Users $users = null)
+    {
+        $this->users = $users;
+
+        return $this;
+    }
+
+    /**
+     * Get users
+     *
+     * @return \AppBundle\Entity\Users 
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
 }

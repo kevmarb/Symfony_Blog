@@ -3,7 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
+
 
 /**
  * Tag
@@ -60,6 +60,14 @@ class Tag
      * @return string 
      */
     public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
     {
         return $this->name;
     }
