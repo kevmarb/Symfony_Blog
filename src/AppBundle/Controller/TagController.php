@@ -2,14 +2,13 @@
 
 namespace AppBundle\Controller;
 
-
-use Sonata\AdminBundle\Tests\Fixtures\Bundle\Entity\Tag;
+use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use AppBundle\Entity\Tag;
 use AppBundle\Form\TagType;
-
 
 class TagController extends Controller
 {

@@ -29,10 +29,6 @@ class Users
      */
     private $name;
 
-    /**
-     * Constructor.
-     */
-
 
     /**
      * Get id
