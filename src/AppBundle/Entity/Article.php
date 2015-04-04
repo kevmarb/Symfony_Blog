@@ -56,12 +56,14 @@ class Article
      * @ORM\ManyToOne(targetEntity="Category")
      */
     private $category;
+
     /**
      * @var Tag
      *
      * @ORM\ManyToMany(targetEntity="Tag")
      */
     private $tag;
+
     /**
      * @var Users
      *

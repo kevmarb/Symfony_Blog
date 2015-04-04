@@ -2,7 +2,9 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\ORM\AbstractQuery;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query\Expr as Expr;
 
 /**
  * UsersRepository
